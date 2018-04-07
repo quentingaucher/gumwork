@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+  html { height: 100%; }
+  body { min-height: 100%; }
+
+  video#bgvid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(polina.jpg) no-repeat;
+      background-size: cover;
+  }
+  @media screen and (max-device-width: 800px) {
+      html {
+           background: url(polina.jpg) #000 no-repeat center center fixed;
+      }
+      #bgvid {
+          display: none;
+      }
+  }
+
+
+  .startcontainergrid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 10% 1fr;
+    grid-template-rows: 1fr 10% 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+    ". logo ."
+    ". language ."
+    ". . .";
+  }
+  .logo {grid-area: logo; width: 100%; height: 50%; justify-self: center; align-self: end;}
+  .logo > img {width: 100%; max-height: 100%;}
+  .language {grid-area: language; justify-self: center; align-self: center;}
+  .startcontainergrid div:nth-child(even) {background-color: red;}
+  .startcontainergrid div:nth-child(odd) {background-color: green;}
+  </style>
+
+
+</head>
+
+  <body>
+
+    <video playsinline autoplay muted loop poster="vhs-noise.jpg" id="bgvid">
+        <source src="/video/vhs-noise.webm" type="video/webm">
+        <source src="/video/vhs-noise.mp4" type="video/mp4">
+    </video>
+
+    <div class="startcontainergrid">
+      <div class="logo"> <img class="svg" src="/img/gumwork-logo-light.svg" alt="Gumwörk logo"> </div>
+      <div class="language">TR | EN</div>
+    </div>
+
+  </body>
+
+</html>

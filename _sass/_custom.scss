@@ -1,0 +1,47 @@
+/**
+ * Static Noise Canvas
+ */
+ html, body {
+     background:#777;
+     margin:0;
+ }
+ #canvas {
+     position:fixed;
+     background:#777;
+ }
+
+
+
+
+
+
+
+
+ /**
+  * START page grid (mobile)
+  */
+.startcontainergrid {
+  display:grid;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-template-rows: 1fr 10% 1fr;
+  grid-template-areas:
+  ". logo ."
+  ". language ."
+  ". . .";
+}
+
+
+/**
+ * START page grid (desktop)
+ */
+ @media screen and (min-width: 736px){
+   .startcontainergrid {
+     display:grid;
+     grid-template-columns: 1fr 15% 1fr;
+     grid-template-rows: 1fr 10% 1fr;
+     grid-template-areas:
+     ". logo ."
+     ". language ."
+     ". . .";
+   }
+}
