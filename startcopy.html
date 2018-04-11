@@ -8,6 +8,18 @@
 
   <style>
 
+
+  @font-face {
+    font-family: 'futura-pt-bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/gumwork/media/font/FuturaPTBold.otf') format("opentype");
+  }
+  div { font-family: 'futura-pt-bold';}
+
+  a {color: white; text-decoration: none;}
+
+
   html { height: 100%; }
   body { min-height: 100%; }
 
@@ -51,11 +63,37 @@
     ". language ."
     ". . .";
   }
-  .logo {grid-area: logo; width: 100%; height: 50%; justify-self: center; align-self: end;}
-  .logo > img {width: 100%; max-height: 100%;}
-  .language {grid-area: language; justify-self: center; align-self: center;}
-  .startcontainergrid div:nth-child(even) {background-color: red;}
-  .startcontainergrid div:nth-child(odd) {background-color: green;}
+  .logo {
+    grid-area: logo;
+    width: 100%;
+    height: 50%;
+    justify-self: center;
+    align-self: end;
+  }
+  .logo > img {
+    width: 100%;
+    max-height: 100%;
+  }
+  .language {
+    grid-area: language;
+    justify-self: center;
+    align-self: center;
+    color: white;
+  }
+  .nav{
+
+  }
+  .social{
+
+  }
+  .icon {
+      > svg {display:inline-block; width:16px; height:16px; vertical-align:middle; path{fill: $grey-color;}}
+  }
+
+
+
+
+
   </style>
 
 
@@ -64,13 +102,16 @@
   <body>
 
     <video playsinline autoplay muted loop poster="vhs-noise.jpg" id="bgvid">
-        <source src="/gumwork/video/vhs-noise.webm" type="video/webm">
-        <source src="/gumwork/video/vhs-noise.mp4" type="video/mp4">
+        <source src="/gumwork/media/video/vhs-noise.webm" type="video/webm">
+        <source src="/gumwork/media/video/vhs-noise.mp4" type="video/mp4">
     </video>
 
     <div class="startcontainergrid">
-      <div class="logo"> <img class="svg" src="/img/gumwork-logo-light.svg" alt="Gumwörk logo light"> </div>
-      <div class="language">TR | EN</div>
+      <div class="logo"> <img class="svg" src="/gumwork/media/img/gumwork-logo-light.svg" alt="Gumwörk logo"> </div>
+      <div class="language"><a href="url">TR</a> | <a href="url">EN</a></div>
+
+
+
     </div>
 
   </body>

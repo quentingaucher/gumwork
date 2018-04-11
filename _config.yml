@@ -7,8 +7,13 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "/gumwork" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
+
+# Social
 twitter_username: jekyllrb
 github_username:  jekyll
+behance_username: gumwork
+vimeo_username: gumwork
+instagram_username: gumwork
 
 # Build settings
 markdown: kramdown
