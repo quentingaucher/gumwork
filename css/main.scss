@@ -4,16 +4,45 @@
 @charset "utf-8";
 
 
+/* OUR VARIABLES */
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+// FONTS
+
+$base-font-family: "Brandon Grotesque Regular", Arial, sans-serif;
 $base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$base-font-size-small:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$nav-font-family: "Futura PT Bold", Arial, sans-serif;
+$nav-font-size:   16px;
+$nav-font-size-small:  $nav-font-size * 0.875;
+$nave-line-height: 1.5;
 
-$text-color:       #111;
+$cat-font-family: "Adobe Garamond Pro", Arial, sans-serif;
+$cat-font-size:   16px;
+$cat-font-size-small:  $nav-font-size * 0.875;
+$cat-line-height: 1.5;
+
+$spacing-unit:     0px;
+
+// FONT COLOR
+
+$text-color:           #000000;
+
+$text-color-nav:       #F8F8FF;
+$text-color-nav-hover: #FF00FF;
+
+$text-color-cat:       #000000;
+$text-color-cat-hover: #FF00FF;
+
+// SOCIAL ICONS
+$icon-max-width: 25px;
+
+// LAYOUT CROSS (also change in html file!)
+$cross-size: 12px;
+
+// Our variables
+
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -22,10 +51,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    100%;
+$on-palm:          100%;
+$on-laptop:        100%;
 
-$on-palm:          600px;
-$on-laptop:        800px;
 
 
 
@@ -46,8 +75,8 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "custom",
-        "layout",
-        "syntax-highlighting"
+  "reset",
+  "base",
+  "custom",
+  "fonts"
 ;

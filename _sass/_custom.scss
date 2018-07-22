@@ -1,14 +1,30 @@
-/**
- * Static Noise Canvas
- */
- html, body {
-     background:#777;
-     margin:0;
- }
- #canvas {
-     position:fixed;
-     background:#777;
- }
+
+/* MAIN */
+html {
+  height: 100%;
+  background-color: red;
+  margin: 0;}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;}
+
+div {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;}
+
+.wrapper {
+  width:100%;
+  height:100vh;
+  overflow: hidden;}
+/* END MAIN */
 
 
 
@@ -16,32 +32,275 @@
 
 
 
+/* LINKS (navigation, etc.) */
 
- /**
-  * START page grid (mobile)
-  */
+a {
+  font-family: $nav-font-family;
+  color: $text-color-nav;
+  text-decoration: none;
+  font-size: $nav-font-size-small;
+  &:hover {
+      color: $text-color-nav-hover;
+      text-decoration: none;}
+  &:visited {}
+}
+
+/* END LINKS */
+
+
+
+
+
+
+/* GRIDS */
+// START page grid (mobile)
 .startcontainergrid {
-  display:grid;
-  grid-template-columns: 1fr 70% 1fr;
-  grid-template-rows: 1fr 10% 1fr;
+ display:grid;
+ grid-template-columns: 1fr 70% 1fr;
+ grid-template-rows: 1fr 10% 1fr;
+ grid-template-areas:
+ ". logo ."
+ ". language ."
+ ". . .";}
+// START page grid (desktop)
+@media screen and (min-width: 736px){
+  .startcontainergrid {
+    display:grid;
+    grid-template-columns: 1fr 15% 1fr;
+    grid-template-rows: 1fr 10% 1fr;
+    grid-template-areas:
+    ". logo ."
+    ". language ."
+    ". . .";}}
+// MAIN page grid (mobile)
+.maincontainergrid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 15% 1fr;
+  grid-template-rows: 2.5fr 1fr 1fr 1fr 0.5fr 1%;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-items: stretch;
+  justify-items: stretch;
   grid-template-areas:
   ". logo ."
-  ". language ."
-  ". . .";
-}
+  ". nav1 ."
+  ". nav2 ."
+  ". nav3 ."
+  ". social ."
+  ". . .";}
+// MAIN page grid (desktop)
+@media screen and (min-width: 736px){
+  .maincontainergrid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 15% 1fr;
+    grid-template-rows: 2.5fr 1fr 1fr 1fr 0.5fr 1%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+    ". logo ."
+    ". nav1 ."
+    ". nav2 ."
+    ". nav3 ."
+    ". social ."
+    ". . .";}}
+// CONTACT page grid (mobile)
+.contactpagecolumngrid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: stretch;
+  justify-items: stretch;
+  grid-template-areas:
+  ". . ."
+  ". email ."
+  ". . .";}
+// CONTACT page grid (desktop)
+@media screen and (min-width: 736px){
+  .contactpagecolumngrid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+    "crossa logopage crossb"
+    ". email ."
+    "crossc . crossd";}}
+
+// ABOUT page grid (mobile)
+.aboutpagecolumngrid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: stretch;
+  justify-items: stretch;
+  grid-template-areas:
+  ". . ."
+  ". email ."
+  ". . .";}
+// ABOUT page grid (desktop)
+@media screen and (min-width: 736px){
+  .aboutpagecolumngrid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+    "crossa logopage crossb"
+    ". aboutcontent ."
+    "crossc aboutbottom crossd";}}
+
+/* END GRIDS */
 
 
-/**
- * START page grid (desktop)
- */
- @media screen and (min-width: 736px){
-   .startcontainergrid {
-     display:grid;
-     grid-template-columns: 1fr 15% 1fr;
-     grid-template-rows: 1fr 10% 1fr;
-     grid-template-areas:
-     ". logo ."
-     ". language ."
-     ". . .";
-   }
+/* GRID CELLS */
+.logo {
+  grid-area: logo;
+  width: 100%;
+  height: 50%;
+  justify-self: center;
+  align-self: end;}
+.logo > a > img {
+  width: 70%;
+  max-width: 60px;
+  max-height: 100%;
+  display: block;
+  margin: auto;}
+.language {
+  grid-area: language;
+  justify-self: center;
+  align-self: center;
+  color: white;}
+.nav1 {
+  grid-area: nav1;
+  justify-self: center;}
+.nav2 {
+  grid-area: nav2;
+  justify-self: center;
+  align-self: center;}
+.nav3 {
+  grid-area: nav3;
+  justify-self: center;
+  align-self: end;}
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  line-height: 1.75;}
+
+.social {
+  grid-area: social;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "iconbehance iconvimeo iconinstagram";}
+
+.email {
+  grid-area: email;
+  justify-self: center;
+  align-self: end;
+  font-family: $cat-font-family;}
+
+.aboutcontent {
+  grid-area: aboutcontent;
+  justify-self: center;
+  align-self: center;
+  font-family: $cat-font-family;}
+
+
+
+.crossa {
+  grid-area: crossa;
+  justify-self: right;
+  align-self: end;
+  line-height: $cross-size;
+  height: $cross-size;}
+.crossb {
+  grid-area: crossb;
+  justify-self: left;
+  align-self: end;
+  line-height: $cross-size;
+  height: $cross-size;}
+.crossc {
+  grid-area: crossc;
+  justify-self: right;
+  align-self: top;
+  line-height: $cross-size;}
+.crossd {
+  grid-area: crossd;
+  justify-self: left;
+  align-self: top;
+  line-height: $cross-size;}
+
+.logopage {
+  grid-area: logopage;
+  justify-self: center;
+  align-self: end;
+  padding-bottom: 20px;}
+
+.aboutbottom {
+  grid-area: aboutbottom;
+  justify-self: center;
+  align-self: center;
+overflow: hidden;}
+
+.aboutinfo {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5)}
+
+/* end GRID CELLS */
+
+/* ICONS */
+.iconbehance {grid-area: iconbehance; justify-self: center; align-self: end; min-width: 30px;}
+.iconvimeo {grid-area: iconvimeo; justify-self: center; align-self: end; min-width: 30px;}
+.iconinstagram {grid-area: iconinstagram; justify-self: center; align-self: end; min-width: 30px;}
+svg {
+  fill: $text-color-nav;
+  &:hover {
+      fill: $text-color-nav-hover;}}
+/* end ICONS */
+
+
+/* ABOUT CIRCLE */
+.about {}
+.aboutcircle {opacity: 0;}
+.aboutname {opacity: 0; font-family: $cat-font-family; color: #FFFFFF}
+.about:hover .aboutcircle{opacity: 1; z-index: 2;}
+.about:hover .aboutname{opacity: 1; z-index: 2;}
+/* end ABOUT CIRCLE */
+
+
+/* VIDEO */
+.wrapper video {
+  object-fit: cover;
+  width:100%;
+  height:100%;
 }
+video::-webkit-media-controls {
+  display:none !important;
+}
+/* end VIDEO */

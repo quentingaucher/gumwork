@@ -1,5 +1,5 @@
 # Site settings
-title: Your awesome title
+title: Gumwörk
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -9,8 +9,8 @@ baseurl: "/gumwork" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 # Social
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username:
+github_username:
 behance_username: gumwork
 vimeo_username: gumwork
 instagram_username: gumwork

@@ -1,0 +1,56 @@
+/* FONTS */
+/* consider removing unused fonts ! */
+
+@font-face{
+  font-family: "Adobe Garamond Pro";
+  src:url("/gumwork/media/font/AGaramondPro-Regular.woff2") format("woff2"),   /* Super Modern Browsers */
+      url("/gumwork/media/font/AGaramondPro-Regular.woff") format("woff"),     /* Pretty Modern Browsers */
+      url("/gumwork/media/font/AGaramondPro-Regular.ttf") format("truetype");  /* Safari, Android, iOS */
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Bold";
+  src:url("/gumwork/media/font/BrandonGrotesque-Bold.woff2") format("woff2"),    /* Super Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-Bold.woff") format("woff"),      /* Pretty Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-Bold.ttf")  format("truetype");  /* Safari, Android, iOS */
+      font-weight: bold;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Light";
+  src:url("/gumwork/media/font/BrandonGrotesque-Light.woff2") format("woff2"),    /* Super Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-Light.woff") format("woff"),      /* Pretty Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-Light.ttf")  format("truetype");  /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque LightItalic";
+  src:url("/gumwork/media/font/BrandonGrotesque-LightItalic.woff2") format("woff2"),   /* Super Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-LightItalic.woff") format("woff"),     /* Pretty Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-LightItalic.ttf")  format("truetype"); /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Regular";
+  src:url("/gumwork/media/font/BrandonGrotesque-Regular.woff2") format("woff2"),   /* Super Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-Regular.woff") format("woff"),     /* Pretty Modern Browsers */
+      url("/gumwork/media/font/BrandonGrotesque-Regular.ttf")  format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT Bold";
+  src:url("/gumwork/media/font/FuturaPT-Bold.woff2") format("woff2"),    /* Super Modern Browsers */
+      url("/gumwork/media/font/FuturaPT-Bold.woff") format("woff"),      /* Pretty Modern Browsers */
+      url("/gumwork/media/font/FuturaPT-Bold.ttf")  format("truetype");  /* Safari, Android, iOS */
+  font-weight: bold;
+  font-style: normal;
+}
